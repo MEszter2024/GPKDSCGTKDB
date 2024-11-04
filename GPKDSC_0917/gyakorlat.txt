@@ -1,0 +1,13 @@
+git status
+
+git add "GPKDSC_0917"
+
+git add .
+
+git commit -n "név"
+
+git push
+
+git log
+
+git shortlog
