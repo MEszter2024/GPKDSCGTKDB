@@ -1,0 +1,25 @@
+TASK2
+CREATE TABLE dolgozo (nev VARCHAR (40), kor INT, munkakor VARCHAR(60));
+
+a. Adja hozzá a SzulEv mezõt a Munkakor után - kötelezõ megadással! 
+ALTER TABLE dolgozo ADD SzulEv INT NOT NULL AFTER Munkakor;
+
+
+b. Törölje a Kor mezõt a Dolgozó relációból! 
+ALTER TABLE Dolgozo DROP COLUMN Kor;
+
+c.) Adja hozzá a Dolgozó tábla SzulEv mezõhöz PK! 
+ALTER TABLE Dolgozo ADD PRIMARY KEY (SzulEv);
+
+d.) Törölje a PK integritást a Dolgozó relációból! 
+ALTER TABLE Dolgozo DROP PRIMARY KEY;
+
+e.) Adja hozzá a Dolgozó táblához ID (PK) nevû mezõt a tábla elejére! 
+ALTER TABLE Dolgozo ADD COLUMN ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST;
+
+f.) Nevezze át a Munkakor mezõt Mkor-re!
+ALTER TABLE Dolgozo CHANGE COLUMN Munkakor Mkor VARCHAR(255);
+
+g.) Nevezze át a SzülEv mezõt – SzülIdo-ra! 
+ALTER TABLE Dolgozo CHANGE COLUMN SzulEv SzulIdo INT;
+
